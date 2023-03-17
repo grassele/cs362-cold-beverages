@@ -13,7 +13,7 @@ class WaterReservoir
   end
 
   def fill
-    current_water_volume = capacity
+    @current_water_volume = capacity    # added the @ to make current_water_volume an instance variable
   end
 
   def drain(volume)
