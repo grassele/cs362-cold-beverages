@@ -14,7 +14,7 @@ describe 'A freezer' do
         expect(freezer.remaining_capacity).to eq(95)
     end
 
-    it 'reduces temperature to 50 degrees when level is set to 2' do
+    it 'changes temperature to 50 degrees when level is set to 2' do
         freezer = Freezer.new
         freezer.set_level(2)
         expect(freezer.temperature).to eq(50)
