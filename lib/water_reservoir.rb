@@ -5,7 +5,11 @@ class WaterReservoir
 
   def initialize(capacity = 10, initial_water_volume = 0)
     @capacity = capacity
-    @current_water_volume = initial_water_volume
+    if initial_water_volume >= 0
+      @current_water_volume = initial_water_volume
+    else
+      @current_water_volume = 0
+    end
   end
 
   def empty?
@@ -17,7 +21,11 @@ class WaterReservoir
   end
 
   def drain(volume)
-    self.current_water_volume -= volume
+    if current_water_volume >= volume
+      self.current_water_volume -= volume
+    else
+      self.current_water_volume = 0
+    end
   end
 
 end
