@@ -17,7 +17,7 @@ class WaterReservoir
   end
 
   def fill
-    @current_water_volume = capacity    # added the @ to make current_water_volume an instance variable
+    @current_water_volume = capacity    # added the @ to make current_water_volume an instance variable (otherwise this method does not alter the variable we need to test)
   end
 
   def drain(volume)

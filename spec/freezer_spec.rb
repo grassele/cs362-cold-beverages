@@ -7,6 +7,11 @@ describe 'A freezer' do
         expect(freezer.capacity).to eq(100)
     end
 
+    it 'can have custom capacity upon initialization' do
+        freezer = Freezer.new(1000)
+        expect(freezer.capacity).to eq(1000)
+    end
+
     it 'reduces capacity when items are added' do
         freezer = Freezer.new(100)
         item = Item.new('TestItem', 5)

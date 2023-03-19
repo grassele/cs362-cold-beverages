@@ -44,4 +44,8 @@ describe 'A refrigerator' do
         expect(freezer.temperature).to eq(50)
     end
 
+    it 'prints a status message' do
+        expect(refrigerator.to_s).to be_truthy
+    end
+
 end

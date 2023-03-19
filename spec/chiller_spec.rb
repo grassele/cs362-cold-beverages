@@ -7,6 +7,11 @@ describe 'A chiller' do
         expect(chiller.capacity).to eq(100)
     end
 
+    it 'can have custom capacity upon initialization' do
+        chiller = Chiller.new(1000)
+        expect(chiller.capacity).to eq(1000)
+    end
+
     it 'adds items, reduces capacity when items are added' do
         chiller = Chiller.new(100)
         item = Item.new('TestItem', 5)
